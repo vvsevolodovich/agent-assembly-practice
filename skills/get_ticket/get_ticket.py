@@ -24,7 +24,7 @@ def get_ticket(ticket_id: str) -> dict:
     Returns:
         dict with keys: ticket_id, title, description, comments.
     """
-    ticket_id = str(ticket_id)
+    ticket_id = str(ticket_id).lstrip("#")
     headers = {"Accept": "application/vnd.github+json"}
     token = os.environ.get("GITHUB_TOKEN")
     if token:

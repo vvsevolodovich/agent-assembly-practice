@@ -29,8 +29,8 @@ agent-assembly-practice/
 3. Verify the tools work:
 
 ```bash
-python skills/get_ticket/get_ticket.py ENG-123
-python skills/post_comment/post_comment.py ENG-123 "hello"
+python skills/get_ticket/get_ticket.py #3
+python skills/post_comment/post_comment.py #3 "hello"
 ```
 
 ---
@@ -101,7 +101,7 @@ Add a test case for when a subscription is not purchased.
 publish
 ```
 
-4. Confirm the agent calls `post_comment` and the comment appears in `data/tickets/ENG-123.json`.
+4. Confirm the agent calls `post_comment` and the comment appears in `data/tickets/3.json`.
 
 ---
 
@@ -109,10 +109,10 @@ publish
 
 - [ ] `CLAUDE.md` exists and all placeholders are filled in
 - [ ] Publish gate rule is present in `CLAUDE.md`
-- [ ] Agent fetches ticket and drafts test cases when sent `ENG-123`
+- [ ] Agent fetches ticket and drafts test cases when sent `3`
 - [ ] Agent updates draft when given a change request (without publishing)
 - [ ] Agent calls `post_comment` only after user says "publish"
-- [ ] `data/tickets/ENG-123.json` has the published comment in its `comments` array
+- [ ] `data/tickets/3.json` has the published comment in its `comments` array
 - [ ] Changes committed and pushed to `main`
 
 ---

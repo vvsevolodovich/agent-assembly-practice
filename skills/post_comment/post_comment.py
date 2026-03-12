@@ -50,7 +50,7 @@ def post_comment(ticket_id: str, comment: str) -> dict:
     Raises:
         requests.HTTPError: If the GitHub API call fails.
     """
-    ticket_id = str(ticket_id)
+    ticket_id = str(ticket_id).lstrip("#")
     token = os.environ.get("GITHUB_TOKEN")
 
     if not token:
